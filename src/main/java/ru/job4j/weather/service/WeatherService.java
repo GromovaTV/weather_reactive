@@ -1,5 +1,6 @@
 package ru.job4j.weather.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -9,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
+@Slf4j
 public class WeatherService {
 
     private final Map<Integer, Weather> weathers = new ConcurrentHashMap<>();
@@ -23,6 +25,7 @@ public class WeatherService {
     }
 
     public Mono<Weather> findById(Integer id) {
+        log.info("Find by id = " + id);
         return Mono.justOrEmpty(weathers.get(id));
     }
 
