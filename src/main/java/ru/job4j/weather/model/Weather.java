@@ -1,6 +1,7 @@
 package ru.job4j.weather.model;
 
 public class Weather {
+
     private int id;
     private String city;
     private int temperature;

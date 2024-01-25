@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
-import ru.job4j.weather.service.WeatherService;
 import ru.job4j.weather.model.Weather;
+import ru.job4j.weather.service.WeatherService;
+
 import java.time.Duration;
 
 @RestController

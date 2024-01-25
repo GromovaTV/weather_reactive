@@ -4,12 +4,15 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import ru.job4j.weather.model.Weather;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class WeatherService {
+
     private final Map<Integer, Weather> weathers = new ConcurrentHashMap<>();
+
     {
         weathers.put(1, new Weather(1, "Msc", 20));
         weathers.put(2, new Weather(2, "SPb", 10));
