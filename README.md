@@ -1,14 +1,12 @@
 # weather_reactive
 
-## О проекте
-
 Приложение прогноза погоды, работающее в режиме реактивного программирования, 
 обрабатывает следующие запросы через своё API.
 
-## Технологии
+## Dependencies
 
 * Spring Webflux
-* Spring Boot 2
+* Spring Boot
 * Docker
 * Java
 * Lombok
@@ -34,3 +32,46 @@
 
 *GET: /cityGreatThen/{t}*
 
+***
+
+## Installation Instructions
+
+### Installing Docker Compose
+*1. Download the package:*
+````
+sudo curl -L "https://github.com/docker/compose/releases/download/1.28.6/docker-compose-$(uname -s)-$(uname -m)" -o
+/usr/local/bin/docker-compose
+````
+
+*2. Set permissions:*
+````
+sudo chmod +x /usr/local/bin/docker-compose
+````
+
+### Project Setup
+*0. Install Maven:*
+````
+sudo apt-get update
+sudo apt-get install maven
+````
+
+*1. Clone the project:*
+````
+git clone https://github.com/GromovaTV/weather_reactive
+````
+
+*2. Build the project:*
+````
+cd weather_reactive
+mvn package
+````
+
+*3. Build Docker image:*
+````
+docker build -t weather_reactive .
+````
+
+*4. Run the application:*
+````
+docker-compose up
+````

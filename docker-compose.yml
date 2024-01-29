@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  app:
+    image: weather_reactive
+    container_name: weather_reactive
+    ports:
+      - "8080:8080"
