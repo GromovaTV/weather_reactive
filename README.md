@@ -8,7 +8,7 @@
 * Spring Webflux
 * Spring Boot
 * Docker
-* Java
+* Java 17
 * Lombok
 * Slf4j
 * Maven
