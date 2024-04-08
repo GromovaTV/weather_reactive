@@ -7,10 +7,12 @@
 
 * Spring Webflux
 * Spring Boot
+* Spring Security (JWT for authentication and authorization)
 * Docker
 * Java 17
 * Lombok
 * Slf4j
+* Swagger
 * Maven
 * Checkstyle
 
@@ -33,6 +35,9 @@
 *GET: /cityGreatThen/{t}*
 
 ***
+
+## Accessing the API via Swagger:
+http://localhost:8080/swagger-ui/index.html#
 
 ## Installation Instructions
 

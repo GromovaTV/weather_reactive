@@ -33,11 +33,13 @@ public class WeatherService {
         return Flux.fromIterable(weathers.values());
     }
 
-    public Mono<Weather> hottest() {
+    public Flux<Weather> hottest() {
+        log.info("Start Service Hottest");
         Flux<Weather> data = Flux.fromIterable(weathers.values());
         Mono<Weather> maxTemperatureWeather = data.reduce((weather1, weather2) ->
                 weather1.getTemperature() > weather2.getTemperature() ? weather1 : weather2);
-        return maxTemperatureWeather;
+        log.info("Finish Service Hottest");
+        return maxTemperatureWeather.flux();
     }
 
     public Flux<Weather> cityGreatThen(int t) {
